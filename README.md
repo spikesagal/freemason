@@ -3,7 +3,7 @@ freemason
 
 A simple way to bundle, minify, and attribute JavaScript packages. No configuration required!
 
-Here is an example of a build file (let's name it `build.js`:
+Here is an example of a build file (let's name it `build.js`):
 
 ```JavaScript
 var build = require('freemason').tasks;
