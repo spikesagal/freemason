@@ -1,27 +1,19 @@
 freemason
 =========
 
-Why use a task runner? Why memorize a million conventions? Why create a giant config file to perform elementary tasks, like bundling and minifying JavaScript?
+A simple way to bundle, minify, and attribute JavaScript packages. No configuration required!
 
-Here is an easier solution:
+Here is an example of a build file (let's name it `build.js`:
 
 ```JavaScript
 var build = require('freemason').tasks;
-
-var outFile = 'dist/jsrequire.min.js';
-var sourceFiles = [
-    'lib_src/LABjs/LAB.src.js',
-    'src/jsrequire.js',
-];
-var creditsFile = 'src/credits.txt';
-
-build.concatenate(sourceFiles);
+build.concatenate('LAB.src.js','jsrequire.src.js');
 build.minify();
-build.attribute(creditsFile);
-build.write(outFile);
+build.attribute('src/credits.txt');
+build.write('dist/jsrequire.min.js');
 ```
 
-That's it! Really, this is all you need to do in order to concatenated a bunch of files, minify/obfuscate the result, put some credits on top, and write it to a file.
+To run the build, just run `node build.js`. That's it! This is all you need to do in order to concatenated a bunch of files, minify/obfuscate the result, put some credits on top, and write it to a file.
 
 Want to write your own tasks? There are only four conventions to keep in mind:
 
