@@ -7,10 +7,10 @@ Here is an example of a build file (let's name it `build.js`):
 
 ```JavaScript
 var build = require('freemason').tasks;
-build.concatenate('LAB.src.js','jsrequire.src.js');
+build.concatenate('sourcefile1.js','sourcefile2.js');
 build.minify();
 build.attribute('src/credits.txt');
-build.write('dist/jsrequire.min.js');
+build.write('dist/bundle.min.js');
 ```
 
 To build, just run `node build.js`. That's it! This is all you need to do in order to concatenated a bunch of files, minify/obfuscate the result, put some credits on top, and write it to a file.
