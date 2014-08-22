@@ -13,7 +13,7 @@ build.attribute('src/credits.txt');
 build.write('dist/jsrequire.min.js');
 ```
 
-To run the build, just run `node build.js`. That's it! This is all you need to do in order to concatenated a bunch of files, minify/obfuscate the result, put some credits on top, and write it to a file.
+To build, just run `node build.js`. That's it! This is all you need to do in order to concatenated a bunch of files, minify/obfuscate the result, put some credits on top, and write it to a file.
 
 Want to write your own tasks? There are only four conventions to keep in mind:
 
